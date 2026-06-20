@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Radio, Play, Pause, Users, VolumeX, Volume1, Volume2 } from 'lucide-react';
 
 export default function RadioPlayerPersistent() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -73,7 +74,7 @@ export default function RadioPlayerPersistent() {
         {/* Left Side: Program Information */}
         <div className="flex items-center gap-4 w-full md:w-auto">
           <div className="w-12 h-12 bg-navy-midnight border border-gold-base flex items-center justify-center shrink-0">
-            <span className="material-symbols-outlined text-gold-base animate-pulse">radio</span>
+            <Radio className="h-6 w-6 text-gold-base animate-pulse" />
           </div>
           <div className="flex flex-col min-w-0">
             <div className="flex items-center gap-2">
@@ -120,9 +121,11 @@ export default function RadioPlayerPersistent() {
             whileTap={{ scale: 0.95 }}
             aria-label={isPlaying ? 'Pausar Radio' : 'Reproducir Radio'}
           >
-            <span className="material-symbols-outlined text-4xl fill">
-              {isPlaying ? 'pause' : 'play_arrow'}
-            </span>
+            {isPlaying ? (
+              <Pause className="h-6 w-6 text-navy-midnight fill-current" />
+            ) : (
+              <Play className="h-6 w-6 text-navy-midnight fill-current ml-0.5" />
+            )}
           </motion.button>
 
           {/* Stream Status Text */}
@@ -135,7 +138,7 @@ export default function RadioPlayerPersistent() {
         <div className="flex items-center justify-between md:justify-end gap-6 w-full md:w-auto">
           {/* Listener Count */}
           <div className="flex items-center gap-2 text-gold-base">
-            <span className="material-symbols-outlined text-base">groups</span>
+            <Users className="h-4 w-4 shrink-0" />
             <span className="font-body text-xs font-bold uppercase tracking-wider">
               142 oyentes
             </span>
@@ -153,13 +156,13 @@ export default function RadioPlayerPersistent() {
               whileHover={{ scale: 1.1 }}
               aria-label="Silenciar / Activar sonido"
             >
-              <span className="material-symbols-outlined">
-                {isMuted || volume === 0
-                  ? 'volume_off'
-                  : volume < 0.4
-                  ? 'volume_down'
-                  : 'volume_up'}
-              </span>
+              {isMuted || volume === 0 ? (
+                <VolumeX className="h-5 w-5" />
+              ) : volume < 0.4 ? (
+                <Volume1 className="h-5 w-5" />
+              ) : (
+                <Volume2 className="h-5 w-5" />
+              )}
             </motion.button>
 
             <AnimatePresence>

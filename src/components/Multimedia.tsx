@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Play, Tv, Users, FileText, Instagram, Image, Video, Smartphone, Radio } from 'lucide-react';
 import FadeInCascade, { FadeInItem } from './FadeInCascade';
 import TextReveal from './TextReveal';
 
@@ -34,15 +35,10 @@ export default function Multimedia() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.4 }}
             />
-            <motion.span
-              className="material-symbols-outlined text-6xl text-error z-10"
-              whileHover={{ scale: 1.15 }}
-            >
-              play_circle
-            </motion.span>
+            <Play className="h-16 w-16 text-error z-10 fill-current opacity-80 group-hover:opacity-100 transition-opacity" />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent z-10">
               <div className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-gold-base">smart_display</span>
+                <Tv className="h-6 w-6 text-gold-base" />
                 <span className="font-headline text-lg text-off-white uppercase font-bold tracking-tight">
                   TRANSMISIÓN EN VIVO - CANAL OFICIAL
                 </span>
@@ -54,7 +50,7 @@ export default function Multimedia() {
           <FadeInItem className="bg-surface-container-high border-2 border-gold-base p-4 flex flex-col gap-4 w-full">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-gold-base">groups</span>
+                <Users className="h-5 w-5 text-gold-base" />
                 <span className="font-body text-sm font-bold text-off-white uppercase">FACEBOOK</span>
               </div>
               <motion.button
@@ -66,7 +62,7 @@ export default function Multimedia() {
               </motion.button>
             </div>
             <div className="aspect-video bg-surface-dark border border-gold-base/30 flex items-center justify-center">
-              <span className="material-symbols-outlined text-gold-base opacity-20 text-5xl">feed</span>
+              <FileText className="h-12 w-12 text-gold-base opacity-20" />
             </div>
           </FadeInItem>
         </FadeInCascade>
@@ -77,7 +73,7 @@ export default function Multimedia() {
           <FadeInItem className="bg-surface-container-high border-2 border-gold-base p-4 flex flex-col gap-4">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-gold-base">photo_camera</span>
+                <Instagram className="h-5 w-5 text-gold-base" />
                 <span className="font-body text-sm font-bold text-off-white uppercase">INSTAGRAM</span>
               </div>
               <motion.button
@@ -89,7 +85,7 @@ export default function Multimedia() {
               </motion.button>
             </div>
             <div className="aspect-square bg-surface-dark border border-gold-base/30 flex items-center justify-center">
-              <span className="material-symbols-outlined text-gold-base opacity-20 text-5xl">image</span>
+              <Image className="h-12 w-12 text-gold-base opacity-20" />
             </div>
           </FadeInItem>
 
@@ -97,7 +93,7 @@ export default function Multimedia() {
           <FadeInItem className="bg-surface-container-high border-2 border-gold-base p-4 flex flex-col gap-4">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-gold-base">movie</span>
+                <Video className="h-5 w-5 text-gold-base" />
                 <span className="font-body text-sm font-bold text-off-white uppercase">TIKTOK</span>
               </div>
               <motion.button
@@ -109,14 +105,14 @@ export default function Multimedia() {
               </motion.button>
             </div>
             <div className="aspect-[9/16] h-48 mx-auto bg-surface-dark border border-gold-base/30 flex items-center justify-center">
-              <span className="material-symbols-outlined text-gold-base opacity-20 text-5xl">smartphone</span>
+              <Smartphone className="h-12 w-12 text-gold-base opacity-20" />
             </div>
           </FadeInItem>
 
           {/* Radio Sidebar Box */}
           <FadeInItem className="bg-surface-container-high border-2 border-gold-base p-6 flex flex-col gap-4">
             <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-gold-base">radio</span>
+              <Radio className="h-5 w-5 text-gold-base" />
               <span className="font-body text-xs font-bold text-off-white uppercase tracking-wider">
                 RADIO TIEMPOS FINALES
               </span>

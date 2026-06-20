@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { MapPin, Clock } from 'lucide-react';
 import FadeInCascade, { FadeInItem } from './FadeInCascade';
 import TextReveal from './TextReveal';
 
@@ -58,11 +59,11 @@ export default function Eventos() {
                   {event.title}
                 </h3>
                 <div className="flex items-center gap-2 text-gold-base opacity-80">
-                  <span className="material-symbols-outlined text-sm">location_on</span>
+                  <MapPin className="h-4 w-4 shrink-0" />
                   <span className="font-body text-xs uppercase">{event.location}</span>
                 </div>
                 <div className="flex items-center gap-2 text-gold-base opacity-80">
-                  <span className="material-symbols-outlined text-sm">schedule</span>
+                  <Clock className="h-4 w-4 shrink-0" />
                   <span className="font-body text-xs uppercase">{event.time}</span>
                 </div>
               </div>

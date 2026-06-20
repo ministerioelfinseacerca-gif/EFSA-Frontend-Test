@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 
+import { User } from 'lucide-react';
+
 export default function TopNavBar() {
   const links = [
     { label: 'INICIO', href: '#inicio', active: true },
@@ -59,7 +61,7 @@ export default function TopNavBar() {
             whileTap={{ scale: 0.95 }}
             aria-label="Perfil de usuario"
           >
-            <span className="material-symbols-outlined text-3xl">account_circle</span>
+            <User className="h-7 w-7 text-gold-base" />
           </motion.button>
         </div>
       </div>

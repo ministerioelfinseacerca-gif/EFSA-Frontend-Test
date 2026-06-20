@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Globe, PlayCircle, Radio, MapPin, Mail, Phone } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -31,21 +32,21 @@ export default function Footer() {
               href="#inicio"
               whileHover={{ scale: 1.1 }}
             >
-              <span className="material-symbols-outlined">public</span>
+              <Globe className="h-5 w-5" />
             </motion.a>
             <motion.a
               className="text-gold-base hover:text-gold-highlight transition-colors"
               href="#multimedia"
               whileHover={{ scale: 1.1 }}
             >
-              <span className="material-symbols-outlined">play_circle</span>
+              <PlayCircle className="h-5 w-5" />
             </motion.a>
             <motion.a
               className="flex items-center gap-2 text-gold-base hover:text-gold-highlight transition-colors"
               href="#radio"
               whileHover={{ scale: 1.05 }}
             >
-              <span className="material-symbols-outlined">broadcast_on_home</span>
+              <Radio className="h-5 w-5" />
               <span className="font-body text-xs uppercase tracking-widest font-semibold">
                 Radio en Vivo
               </span>
@@ -59,7 +60,7 @@ export default function Footer() {
             Dirección
           </h4>
           <div className="flex gap-3 text-off-white opacity-80">
-            <span className="material-symbols-outlined text-gold-base shrink-0">location_on</span>
+            <MapPin className="h-5 w-5 text-gold-base shrink-0" />
             <p className="font-body text-sm leading-relaxed">Chacabuco 549, Santiago Centro</p>
           </div>
         </div>
@@ -95,7 +96,7 @@ export default function Footer() {
               className="flex items-center gap-3 hover:text-gold-highlight transition-colors"
               href="mailto:marcosmorales_evangelista@hotmail.com"
             >
-              <span className="material-symbols-outlined text-gold-base shrink-0">mail</span>
+              <Mail className="h-4 w-4 text-gold-base shrink-0" />
               <span className="font-body text-xs break-all">
                 marcosmorales_evangelista@hotmail.com
               </span>
@@ -104,11 +105,11 @@ export default function Footer() {
               className="flex items-center gap-3 hover:text-gold-highlight transition-colors"
               href="mailto:elfinseacercaministerio@gmail.com"
             >
-              <span className="material-symbols-outlined text-gold-base shrink-0">mail</span>
+              <Mail className="h-4 w-4 text-gold-base shrink-0" />
               <span className="font-body text-xs break-all">elfinseacercaministerio@gmail.com</span>
             </a>
             <div className="flex items-center gap-3">
-              <span className="material-symbols-outlined text-gold-base shrink-0">call</span>
+              <Phone className="h-4 w-4 text-gold-base shrink-0" />
               <span className="font-body text-xs">+56 2 2688 9465</span>
             </div>
           </div>

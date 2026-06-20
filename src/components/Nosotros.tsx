@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { ArrowRight, Calendar } from 'lucide-react';
 import FadeInCascade, { FadeInItem } from './FadeInCascade';
 import TextReveal from './TextReveal';
 
@@ -76,7 +77,7 @@ export default function Nosotros() {
                 whileHover={{ x: 3 }}
               >
                 LEER BIOGRAFÍA{' '}
-                <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                <ArrowRight className="h-4 w-4" />
               </motion.a>
               <motion.a
                 className="text-gold-base font-body text-xs font-bold uppercase flex items-center gap-2 hover:text-gold-highlight transition-colors"
@@ -84,7 +85,7 @@ export default function Nosotros() {
                 whileHover={{ x: 3 }}
               >
                 AGENDA{' '}
-                <span className="material-symbols-outlined text-sm">calendar_today</span>
+                <Calendar className="h-4 w-4" />
               </motion.a>
             </div>
           </div>

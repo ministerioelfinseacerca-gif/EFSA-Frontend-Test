@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Play, ArrowRight } from 'lucide-react';
 import FadeInCascade, { FadeInItem } from './FadeInCascade';
 import TextReveal from './TextReveal';
 
@@ -29,13 +30,7 @@ export default function Noticias() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.4 }}
             />
-            <motion.span
-              className="material-symbols-outlined text-6xl text-gold-base opacity-60 z-10"
-              whileHover={{ scale: 1.1, opacity: 1 }}
-              transition={{ duration: 0.2 }}
-            >
-              play_circle
-            </motion.span>
+            <Play className="h-14 w-14 text-gold-base opacity-60 group-hover:opacity-100 transition-all duration-200 z-10 fill-current" />
           </FadeInItem>
 
           {/* Content Info */}
@@ -113,7 +108,7 @@ export default function Noticias() {
               href="#adquirir"
               whileHover={{ x: 5 }}
             >
-              ADQUIRIR <span className="material-symbols-outlined text-sm">arrow_forward</span>
+              ADQUIRIR <ArrowRight className="h-4 w-4" />
             </motion.a>
           </FadeInItem>
         </FadeInCascade>

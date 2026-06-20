@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Tablet, BookOpen, ShoppingCart, Book, Store } from 'lucide-react';
 import FadeInCascade, { FadeInItem } from './FadeInCascade';
 import TextReveal from './TextReveal';
 
@@ -27,11 +28,9 @@ export default function Recursos() {
           >
             <div className="flex justify-between items-start">
               <div className="w-14 h-14 bg-navy-midnight border border-gold-base flex items-center justify-center">
-                <span className="material-symbols-outlined text-gold-base text-3xl">tablet_android</span>
+                <Tablet className="h-7 w-7 text-gold-base" />
               </div>
-              <span className="material-symbols-outlined text-gold-base opacity-10 text-6xl absolute top-8 right-8 pointer-events-none select-none">
-                menu_book
-              </span>
+              <BookOpen className="h-16 w-16 text-gold-base opacity-10 absolute top-8 right-8 pointer-events-none select-none" />
             </div>
 
             <div className="flex flex-col gap-4">
@@ -69,11 +68,9 @@ export default function Recursos() {
           >
             <div className="flex justify-between items-start">
               <div className="w-14 h-14 bg-navy-midnight border border-gold-base flex items-center justify-center">
-                <span className="material-symbols-outlined text-gold-base text-3xl">shopping_cart</span>
+                <ShoppingCart className="h-7 w-7 text-gold-base" />
               </div>
-              <span className="material-symbols-outlined text-gold-base opacity-10 text-6xl absolute top-8 right-8 rotate-12 pointer-events-none select-none">
-                book
-              </span>
+              <Book className="h-16 w-16 text-gold-base opacity-10 absolute top-8 right-8 rotate-12 pointer-events-none select-none" />
             </div>
 
             <div className="flex flex-col gap-4">
@@ -90,7 +87,7 @@ export default function Recursos() {
                 className="w-full md:w-auto bg-transparent border-2 border-gold-base text-gold-base font-body text-xs font-bold uppercase px-8 py-3 flex items-center justify-center gap-3 hover:bg-gold-base hover:text-navy-midnight transition-colors cursor-pointer"
                 whileTap={{ scale: 0.95 }}
               >
-                VISITAR TIENDA <span className="material-symbols-outlined text-sm">storefront</span>
+                VISITAR TIENDA <Store className="h-4 w-4" />
               </motion.button>
             </div>
           </motion.div>
