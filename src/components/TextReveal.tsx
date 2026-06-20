@@ -28,7 +28,7 @@ export default function TextReveal({ text, className = '', as = 'h1' }: TextReve
       y: '0%',
       transition: {
         duration: 0.7,
-        ease: [0.16, 1, 0.3, 1], // easeOutExpo
+        ease: [0.16, 1, 0.3, 1] as const, // easeOutExpo
       },
     },
   };
