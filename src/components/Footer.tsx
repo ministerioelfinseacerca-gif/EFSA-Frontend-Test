@@ -13,7 +13,7 @@ export default function Footer() {
           <img
             alt="Logo"
             className="h-20 w-auto object-contain self-start filter brightness-100"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWs-pZjziEnhWRAMIQnoXuZzwoOZI_xFGch08aDrYloDG4P8TfeRAn2MCwmk_BmPC8qU14A_v5-JCLCh4rg2Pie3xSqtHr9KC5iZNWOI2BL1naIuO1zzU88nq1MpxzRlGL04REgvHTJxS64oktbQ47DoFobNAOZNxtoizkYm9gnEtghjzxE-wO65b9IfuByfKncJ1ndge45Ym7BXusw61q9kDNg1p99HI9yG6_SYXsG3-kqhMylQUKznPgB5AHOkt32CKh_deKgqDR"
+            src="/logo.svg"
           />
           <div className="flex flex-col">
             <span className="font-headline text-lg text-gold-base font-bold uppercase leading-tight">

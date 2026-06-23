@@ -25,7 +25,7 @@ export default function TopNavBar() {
           <img
             alt="Ministerio Evangelístico Pentecostal"
             className="h-14 w-auto object-contain filter brightness-100"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjW-4ZeJCqxtWqh4llvLyStaQj4RKmR9IigSdiuI9mQow-MqaLpwaIFztGZP4zFCIadOOv7euBVslYm9wVxZirrbzKUe3mw3kXiCPaDJWCjjF03EY6Guyw0T_dPEez6gq2g7KkGnRtxyDeGcy8hGfuLqPBtDgdWQUGqxOD9Ys6LUopEwjxbaLoquaREeupxmKYECddM_1ZFq5NqS3DrpSBWjbvhyZJxS7wY-fWnzWk_KqZoB9CMhYRtcdJVF2jn_F6Ycn68Hs6CaM8"
+            src="/logo.svg"
           />
           <div className="flex flex-col">
             <span className="font-headline text-lg font-bold text-gold-base tracking-tighter uppercase leading-none">
