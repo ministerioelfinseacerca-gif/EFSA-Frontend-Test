@@ -28,7 +28,7 @@ export default function Multimedia() {
               <span className="font-body text-xs text-off-white font-bold uppercase">LIVE</span>
             </div>
             <motion.a
-              href="https://www.youtube.com/@tiemposfinaleshd4648/featured"
+              href="https://www.youtube.com/@tiemposfinaleshd4648/streams"
               target="_blank"
               rel="noopener noreferrer"
               className="absolute inset-0 opacity-40 bg-cover bg-center"
@@ -38,7 +38,7 @@ export default function Multimedia() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.4 }}
             />
-            <a href="https://www.youtube.com/@tiemposfinaleshd4648/featured" target="_blank" rel="noopener noreferrer" className="z-10">
+            <a href="https://www.youtube.com/@tiemposfinaleshd4648/streams" target="_blank" rel="noopener noreferrer" className="z-10">
               <Play className="h-16 w-16 text-error fill-current opacity-80 hover:opacity-100 hover:scale-110 transition-all" />
             </a>
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none">
