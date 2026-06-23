@@ -285,7 +285,7 @@ function AudioLivePlayer() {
               onClick={togglePlay}
               whileTap={{ scale: 0.95 }}
               whileHover={{ scale: 1.05 }}
-              disabled={isLoading && status !== 'playing'}
+              disabled={isLoading}
               aria-label={
                 status === 'playing' || status === 'loading'
                   ? 'Pausar radio'
