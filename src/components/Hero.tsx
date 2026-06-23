@@ -15,7 +15,7 @@ export default function Hero() {
           transition={{ duration: 1.5, ease: 'easeOut' }}
           className="absolute inset-0 z-0 mix-blend-luminosity bg-cover bg-center"
           style={{
-            backgroundImage: `url("https://lh3.googleusercontent.com/aida/AP1WRLu_i-vX45c61t-fxUJX-3ye9w7Ef9VIF4HzKuhmUtUiJI4iOXU8QBQkZk62Fb9DFRv43O4R3Ekn1FbkR8-sRtqtumumplluIl6UGzbAoYsghQ96LNftF4PUsj4HNbenc38u-i5E1LWuvQmdRpvZDGmPBrwF-uYhyqbc3Ts0eoKoxJs0wfbcJRRW3-O8y3zdqrlmIQbPWnkKg-UR1_6KL3EF0Up49NR0-6svnZh-SlpKu0lAk0SaQhD2yy3j")`,
+            backgroundImage: `url("/portada.jpg")`,
           }}
         />
 
