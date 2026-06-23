@@ -1,10 +1,18 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Radio, Play, Pause, Users, VolumeX, Volume1, Volume2 } from 'lucide-react';
 
 export default function RadioPlayerPersistent() {
+  const pathname = usePathname();
+
+  // Ocultar el reproductor persistente en la página dedicada de la radio
+  if (pathname === '/radio') {
+    return null;
+  }
+
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.8);
   const [isMuted, setIsMuted] = useState(false);
@@ -12,7 +20,7 @@ export default function RadioPlayerPersistent() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Fallback stream url for testing (using a placeholder or standard shoutcast/icecast stream)
-  const streamUrl = 'https://stream.zeno.fm/9sgxsz11yzzux'; 
+  const streamUrl = 'https://audio3.tustreaming.cl/8140/stream'; 
 
   const handlePlayPause = () => {
     if (!audioRef.current) return;
@@ -130,7 +138,7 @@ export default function RadioPlayerPersistent() {
 
           {/* Stream Status Text */}
           <div className="hidden lg:block w-32 font-body text-xs text-gold-base/80 font-bold uppercase tracking-wider">
-            {isPlaying ? 'SINTONIZANDO...' : 'SINAL EN PAUSA'}
+            {isPlaying ? 'SINTONIZANDO...' : 'SEÑAL EN PAUSA'}
           </div>
         </div>
 

@@ -29,21 +29,21 @@ export default function Footer() {
           <div className="flex flex-wrap gap-4 mt-2">
             <motion.a
               className="text-gold-base hover:text-gold-highlight transition-colors"
-              href="#inicio"
+              href="/#inicio"
               whileHover={{ scale: 1.1 }}
             >
               <Globe className="h-5 w-5" />
             </motion.a>
             <motion.a
               className="text-gold-base hover:text-gold-highlight transition-colors"
-              href="#multimedia"
+              href="/#multimedia"
               whileHover={{ scale: 1.1 }}
             >
               <PlayCircle className="h-5 w-5" />
             </motion.a>
             <motion.a
               className="flex items-center gap-2 text-gold-base hover:text-gold-highlight transition-colors"
-              href="#radio"
+              href="/radio"
               whileHover={{ scale: 1.05 }}
             >
               <Radio className="h-5 w-5" />

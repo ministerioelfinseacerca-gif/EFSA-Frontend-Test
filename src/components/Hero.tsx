@@ -55,7 +55,7 @@ export default function Hero() {
             className="flex flex-wrap gap-4 mt-4"
           >
             <motion.a
-              href="#radio"
+              href="/radio"
               className="bg-navy-midnight border-2 border-gold-base text-off-white font-body text-sm font-bold uppercase px-8 py-4 hover:border-gold-highlight cursor-pointer text-center"
               whileHover={{ scale: 1.03, y: -2 }}
               whileTap={{ scale: 0.98 }}

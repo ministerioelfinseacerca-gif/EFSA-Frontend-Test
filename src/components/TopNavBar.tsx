@@ -1,17 +1,20 @@
 'use client';
 
 import { motion } from 'framer-motion';
-
 import { User } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 export default function TopNavBar() {
+  const pathname = usePathname();
+
   const links = [
-    { label: 'INICIO', href: '#inicio', active: true },
-    { label: 'NOSOTROS', href: '#nosotros' },
-    { label: 'NOTICIAS', href: '#noticias' },
-    { label: 'MULTIMEDIA', href: '#multimedia' },
-    { label: 'EVENTOS', href: '#eventos' },
-    { label: 'RECURSOS', href: '#recursos-edificacion' },
+    { label: 'INICIO', href: '/#inicio', active: pathname === '/' },
+    { label: 'NOSOTROS', href: '/#nosotros' },
+    { label: 'NOTICIAS', href: '/#noticias' },
+    { label: 'MULTIMEDIA', href: '/#multimedia' },
+    { label: 'EVENTOS', href: '/#eventos' },
+    { label: 'RECURSOS', href: '/#recursos-edificacion' },
+    { label: 'RADIO', href: '/radio', active: pathname === '/radio' },
   ];
 
   return (

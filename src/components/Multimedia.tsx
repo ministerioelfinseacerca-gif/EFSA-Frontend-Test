@@ -126,7 +126,7 @@ export default function Multimedia() {
               </p>
             </div>
             <motion.a
-              href="#radio-player"
+              href="/radio"
               className="mt-2 bg-gold-base text-navy-midnight font-body text-sm font-bold uppercase px-6 py-3 hover:bg-gold-highlight transition-colors w-full text-center cursor-pointer block"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

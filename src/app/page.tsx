@@ -2,6 +2,7 @@ import SmoothScroll from '@/components/SmoothScroll';
 import TopNavBar from '@/components/TopNavBar';
 import Hero from '@/components/Hero';
 import Nosotros from '@/components/Nosotros';
+import DeclaracionFe from '@/components/DeclaracionFe';
 import Noticias from '@/components/Noticias';
 import Multimedia from '@/components/Multimedia';
 import Eventos from '@/components/Eventos';
@@ -25,6 +26,9 @@ export default function Home() {
 
         {/* Nosotros (About) Section */}
         <Nosotros />
+
+        {/* Declaración de Fe Section */}
+        <DeclaracionFe />
 
         {/* Noticias (News) Section */}
         <Noticias />
