@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Play, Tv, Users, FileText, Instagram, Image, Video, Smartphone, Radio } from 'lucide-react';
+import { Play, Tv, Users, FileText, Instagram, Image, Video, Smartphone, Radio, Youtube } from 'lucide-react';
 import FadeInCascade, { FadeInItem } from './FadeInCascade';
 import TextReveal from './TextReveal';
 
@@ -46,25 +46,88 @@ export default function Multimedia() {
             </div>
           </FadeInItem>
 
-          {/* Facebook Wrapper card */}
-          <FadeInItem className="bg-surface-container-high border-2 border-gold-base p-4 flex flex-col gap-4 w-full">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center gap-2">
-                <Users className="h-5 w-5 text-gold-base" />
-                <span className="font-body text-sm font-bold text-off-white uppercase">FACEBOOK</span>
+          {/* Two column grid for Facebook & Coro Israel */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+            {/* Facebook Wrapper card */}
+            <FadeInItem className="bg-surface-container-high border-2 border-gold-base p-4 flex flex-col justify-between gap-4 w-full h-full">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <Users className="h-5 w-5 text-gold-base" />
+                  <span className="font-body text-sm font-bold text-off-white uppercase">FACEBOOK</span>
+                </div>
+                <motion.a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-gold-base text-gold-base px-3 py-1 font-body text-xs font-bold uppercase hover:bg-gold-base hover:text-navy-midnight transition-colors cursor-pointer block"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  SEGUIR
+                </motion.a>
               </div>
-              <motion.button
-                className="border border-gold-base text-gold-base px-3 py-1 font-body text-xs font-bold uppercase hover:bg-gold-base hover:text-navy-midnight transition-colors cursor-pointer"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
+              <div className="flex-1 min-h-[160px] bg-surface-dark border border-gold-base/30 flex flex-col items-center justify-center p-6 text-center gap-3">
+                <FileText className="h-10 w-10 text-gold-base opacity-45" />
+                <div>
+                  <h4 className="font-headline text-xs font-bold text-gold-highlight uppercase tracking-wider">
+                    PÁGINA OFICIAL
+                  </h4>
+                  <p className="font-body text-[11px] text-on-surface opacity-70 mt-1 leading-relaxed">
+                    Sigue nuestras publicaciones, transmisiones y galerías de fotos oficiales en Facebook.
+                  </p>
+                </div>
+              </div>
+            </FadeInItem>
+
+            {/* Coro Israel YouTube Card */}
+            <FadeInItem className="bg-surface-container-high border-2 border-gold-base p-4 flex flex-col justify-between gap-4 w-full h-full">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <Youtube className="h-5 w-5 text-gold-base" />
+                  <span className="font-body text-sm font-bold text-off-white uppercase">YOUTUBE</span>
+                </div>
+                <motion.a
+                  href="https://www.youtube.com/@coroisraeloficial"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-gold-base text-gold-base px-3 py-1 font-body text-xs font-bold uppercase hover:bg-gold-base hover:text-navy-midnight transition-colors cursor-pointer block"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  VER CANAL
+                </motion.a>
+              </div>
+              
+              <a
+                href="https://www.youtube.com/@coroisraeloficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 relative min-h-[160px] bg-surface-dark border border-gold-base/30 flex flex-col justify-end group overflow-hidden cursor-pointer"
               >
-                FOLLOW
-              </motion.button>
-            </div>
-            <div className="aspect-video bg-surface-dark border border-gold-base/30 flex items-center justify-center">
-              <FileText className="h-12 w-12 text-gold-base opacity-20" />
-            </div>
-          </FadeInItem>
+                <motion.div
+                  className="absolute inset-0 opacity-40 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url("/coro_israel_thumbnail.png")`,
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.4 }}
+                />
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-center justify-center">
+                  <Play className="h-10 w-10 text-error fill-current opacity-85 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                </div>
+                
+                <div className="p-4 bg-gradient-to-t from-black to-transparent z-10 w-full">
+                  <h4 className="font-headline text-xs font-bold text-off-white uppercase tracking-tight">
+                    CORO ISRAEL
+                  </h4>
+                  <p className="font-body text-[10px] text-gold-highlight tracking-widest uppercase mt-0.5">
+                    @coroisraeloficial
+                  </p>
+                </div>
+              </a>
+            </FadeInItem>
+          </div>
         </FadeInCascade>
 
         {/* RIGHT COLUMN: Social Feed Sidebar */}
