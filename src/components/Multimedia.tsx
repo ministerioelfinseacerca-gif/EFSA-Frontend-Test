@@ -31,9 +31,9 @@ export default function Multimedia() {
               href="https://www.youtube.com/@tiemposfinaleshd4648/featured"
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute inset-0 opacity-20 bg-cover bg-center"
+              className="absolute inset-0 opacity-40 bg-cover bg-center"
               style={{
-                backgroundImage: `url("https://lh3.googleusercontent.com/aida/AP1WRLu_i-vX45c61t-fxUJX-3ye9w7Ef9VIF4HzKuhmUtUiJI4iOXU8QBQkZk62Fb9DFRv43O4R3Ekn1FbkR8-sRtqtumumplluIl6UGzbAoYsghQ96LNftF4PUsj4HNbenc38u-i5E1LWuvQmdRpvZDGmPBrwF-uYhyqbc3Ts0eoKoxJs0wfbcJRRW3-O8y3zdqrlmIQbPWnkKg-UR1_6KL3EF0Up49NR0-6svnZh-SlpKu0lAk0SaQhD2yy3j")`,
+                backgroundImage: `url("/live_broadcast_cover.png")`,
               }}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.4 }}
@@ -75,15 +75,23 @@ export default function Multimedia() {
                 href="https://www.facebook.com/people/Pastor-Marcos-Morales/61578795157619/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 min-h-[160px] bg-surface-dark border border-gold-base/30 flex flex-col items-center justify-center p-6 text-center gap-3 hover:bg-surface-container transition-colors"
+                className="flex-1 relative min-h-[160px] bg-surface-dark border border-gold-base/30 flex flex-col justify-end group overflow-hidden cursor-pointer"
               >
-                <FileText className="h-10 w-10 text-gold-base opacity-45" />
-                <div>
-                  <h4 className="font-headline text-xs font-bold text-gold-highlight uppercase tracking-wider">
+                <motion.div
+                  className="absolute inset-0 opacity-40 bg-cover bg-center"
+                  style={{ backgroundImage: `url("/pastor_facebook_cover.png")` }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.4 }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-center justify-center">
+                  <Users className="h-10 w-10 text-off-white opacity-85 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                </div>
+                <div className="p-4 bg-gradient-to-t from-black to-transparent z-10 w-full">
+                  <h4 className="font-headline text-xs font-bold text-off-white uppercase tracking-tight">
                     PERFIL OFICIAL
                   </h4>
-                  <p className="font-body text-[11px] text-on-surface opacity-70 mt-1 leading-relaxed">
-                    Siga las publicaciones, prédicas y reflexiones del Pastor Marcos Morales.
+                  <p className="font-body text-[10px] text-gold-highlight tracking-widest uppercase mt-0.5">
+                    @pastormarcosmorales
                   </p>
                 </div>
               </a>
@@ -160,11 +168,21 @@ export default function Multimedia() {
                 INSTAGRAM
               </motion.a>
             </div>
-            <div className="aspect-square bg-surface-dark border border-gold-base/30 flex flex-col items-center justify-center p-4 text-center">
-              <Image className="h-12 w-12 text-gold-base opacity-20 mb-2" />
-              <p className="font-body text-xs text-on-surface opacity-70">Sigue la galería de fotos y reels de Coro Israel</p>
-              <a href="https://www.facebook.com/people/Coro-Israel-Chile/100028975343072/" target="_blank" rel="noopener noreferrer" className="text-gold-highlight text-xs font-bold mt-4 underline hover:text-white transition-colors">Ver también en Facebook</a>
-            </div>
+            <a href="https://www.instagram.com/coroisrael/" target="_blank" rel="noopener noreferrer" className="relative aspect-square bg-surface-dark border border-gold-base/30 flex flex-col justify-end group overflow-hidden cursor-pointer">
+              <motion.div
+                className="absolute inset-0 opacity-50 bg-cover bg-center"
+                style={{ backgroundImage: `url("/coro_instagram_cover.png")` }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.4 }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-0" />
+              <div className="p-4 bg-gradient-to-t from-black to-transparent z-10 w-full text-center">
+                <h4 className="font-headline text-sm font-bold text-off-white tracking-widest uppercase">
+                  @coroisrael
+                </h4>
+              </div>
+            </a>
+            <a href="https://www.facebook.com/people/Coro-Israel-Chile/100028975343072/" target="_blank" rel="noopener noreferrer" className="text-gold-highlight text-xs font-bold text-center underline hover:text-white transition-colors mt-2 block">Ver también en Facebook</a>
           </FadeInItem>
 
           {/* Pastor Marcos TikTok Embed */}
@@ -185,11 +203,20 @@ export default function Multimedia() {
                 FOLLOW
               </motion.a>
             </div>
-            {/* Simulated feed UI / Link to TikTok */}
-            <a href="https://www.tiktok.com/@pastor.marcos.mor" target="_blank" rel="noopener noreferrer" className="aspect-[9/16] h-48 mx-auto bg-surface-dark border border-gold-base/30 flex flex-col items-center justify-center group w-full hover:bg-surface-container transition-colors">
-              <Smartphone className="h-12 w-12 text-gold-base opacity-40 group-hover:scale-110 transition-transform mb-3" />
-              <span className="font-headline text-xs font-bold text-gold-highlight tracking-widest">@pastor.marcos.mor</span>
-              <span className="font-body text-[10px] text-off-white opacity-60 mt-1">Ver videos y reflexiones</span>
+            <a href="https://www.tiktok.com/@pastor.marcos.mor" target="_blank" rel="noopener noreferrer" className="relative aspect-[9/16] h-64 mx-auto bg-surface-dark border border-gold-base/30 flex flex-col justify-end group overflow-hidden cursor-pointer w-full">
+              <motion.div
+                className="absolute inset-0 opacity-60 bg-cover bg-center"
+                style={{ backgroundImage: `url("/pastor_tiktok_cover.png")` }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.4 }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent flex items-center justify-center">
+                <Play className="h-12 w-12 text-off-white fill-current opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+              </div>
+              <div className="p-4 z-10 w-full bg-gradient-to-t from-black to-transparent text-center">
+                <span className="font-headline text-xs font-bold text-off-white tracking-widest block mb-1">@pastor.marcos.mor</span>
+                <span className="font-body text-[10px] text-gold-highlight uppercase">Ver videos</span>
+              </div>
             </a>
           </FadeInItem>
 
