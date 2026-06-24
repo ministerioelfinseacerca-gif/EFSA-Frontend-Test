@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { User, Menu, X, ArrowLeft } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function TopNavBar() {
   const pathname = usePathname();
@@ -20,8 +21,20 @@ export default function TopNavBar() {
     { label: 'RADIO', href: '/radio', active: pathname === '/radio' },
   ];
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     setIsMobileMenuOpen(false);
+    
+    // Smooth scroll if we are already on the home page and clicking a hash link
+    if (href.startsWith('/#') && pathname === '/') {
+      e.preventDefault();
+      const id = href.replace('/#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        // Update URL hash without jumping
+        window.history.pushState(null, '', href);
+      }
+    }
   };
 
   const isRadioOrBioPage = pathname.includes('/radio') || pathname.includes('/biografia');
@@ -40,7 +53,7 @@ export default function TopNavBar() {
               <ArrowLeft className="h-6 w-6" />
             </button>
           )}
-          <a href="/" className="flex items-center gap-3 md:gap-4 cursor-pointer">
+          <Link href="/" className="flex items-center gap-3 md:gap-4 cursor-pointer">
             <img
               alt="Ministerio Evangelístico Pentecostal"
               className="h-10 md:h-14 w-auto object-contain filter brightness-100"
@@ -54,38 +67,35 @@ export default function TopNavBar() {
                 EL FIN SE ACERCA
               </span>
             </div>
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-8">
           {links.map((link, idx) => (
-            <motion.a
+            <Link
               key={idx}
               href={link.href}
-              className={`font-body text-sm font-bold tracking-wider relative py-1 transition-colors duration-200 ${
+              onClick={(e) => handleLinkClick(e, link.href)}
+              className={`font-body text-sm font-bold tracking-wider relative py-1 transition-all duration-200 hover:scale-105 active:scale-95 inline-block ${
                 link.active
                   ? 'text-gold-highlight border-b-2 border-gold-base'
                   : 'text-gold-base opacity-80 hover:text-gold-highlight'
               }`}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
             >
               {link.label}
-            </motion.a>
+            </Link>
           ))}
         </nav>
 
         {/* Desktop User Account */}
         <div className="hidden md:flex items-center gap-4">
-          <motion.button
-            className="text-gold-base hover:text-gold-highlight cursor-pointer flex items-center justify-center p-1 border-2 border-transparent hover:border-gold-base"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <button
+            className="text-gold-base hover:text-gold-highlight cursor-pointer flex items-center justify-center p-1 border-2 border-transparent hover:border-gold-base transition-transform hover:scale-105 active:scale-95"
             aria-label="Perfil de usuario"
           >
             <User className="h-7 w-7 text-gold-base" />
-          </motion.button>
+          </button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -112,16 +122,16 @@ export default function TopNavBar() {
           >
             <nav className="flex flex-col items-center py-6 gap-6">
               {links.map((link, idx) => (
-                <a
+                <Link
                   key={idx}
                   href={link.href}
-                  onClick={handleLinkClick}
+                  onClick={(e) => handleLinkClick(e, link.href)}
                   className={`font-headline text-lg font-bold tracking-widest uppercase ${
                     link.active ? 'text-gold-highlight' : 'text-off-white hover:text-gold-base'
                   }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
           </motion.div>

@@ -9,6 +9,7 @@ import Eventos from '@/components/Eventos';
 import Recursos from '@/components/Recursos';
 import Footer from '@/components/Footer';
 import RadioPlayerPersistent from '@/components/RadioPlayerPersistent';
+import InfiniteMarquee from '@/components/infinite-marquee';
 
 export default function Home() {
   return (
@@ -23,6 +24,13 @@ export default function Home() {
       <main className="w-full flex flex-col gap-24 pt-8 pb-32">
         {/* Hero Section */}
         <Hero />
+
+        {/* Separator Marquee */}
+        <InfiniteMarquee
+          items={["Sana Doctrina", "•", "Radio 24/7", "•", "Escatología", "•", "Apologética", "•"]}
+          speed={30}
+          className="py-6 border-y border-gold-base/20 bg-black/10"
+        />
 
         {/* Nosotros (About) Section */}
         <Nosotros />

@@ -308,7 +308,7 @@ export default function DeclaracionFe() {
               El Ministerio Evangelístico Pentecostal <strong>“El Fin Se Acerca”</strong> es una denominación cristiana evangélica adherida a la fe protestante, pentecostal y trinitaria.
             </p>
             <p className="font-body text-sm text-on-surface opacity-80 leading-relaxed">
-              Declaramos seguir el modelo bíblico y apostólico de las antiguas iglesias evangkapitalistas pentecostales de Chile, manteniéndonos distantes del modernismo y corrientes neopentecostales contemporáneas. Somos un ministerio completamente apolítico e independiente de partidos o ideologías humanas.
+              Declaramos seguir el modelo bíblico y apostólico de las antiguas iglesias evangelísticas pentecostales de Chile, manteniéndonos distantes del modernismo y corrientes neopentecostales contemporáneas. Somos un ministerio completamente apolítico e independiente de partidos o ideologías humanas.
             </p>
           </div>
 
