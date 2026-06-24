@@ -15,7 +15,7 @@ export default function CustomCursor({
     if (typeof window === 'undefined') return;
 
     // --- RIPPLE EFFECT ---
-    const handleMouseDown = (e: MouseEvent) => {
+    const handlePointerDown = (e: PointerEvent) => {
       const ripple = document.createElement('div');
       ripple.className = 'click-ripple';
       ripple.style.left = `${e.clientX}px`;
@@ -26,7 +26,7 @@ export default function CustomCursor({
         ripple.remove();
       }, 600);
     };
-    window.addEventListener('mousedown', handleMouseDown);
+    window.addEventListener('pointerdown', handlePointerDown);
 
     // --- FOLLOW CURSOR EFFECT ---
     let canvas: HTMLCanvasElement;
@@ -96,7 +96,12 @@ export default function CustomCursor({
     };
 
     const init = () => {
-      if (prefersReducedMotion.matches) {
+      const isTouchDevice = 
+        window.matchMedia('(pointer: coarse)').matches || 
+        'ontouchstart' in window || 
+        navigator.maxTouchPoints > 0;
+
+      if (prefersReducedMotion.matches || isTouchDevice) {
         return;
       }
 
@@ -134,7 +139,7 @@ export default function CustomCursor({
     init();
 
     return () => {
-      window.removeEventListener('mousedown', handleMouseDown);
+      window.removeEventListener('pointerdown', handlePointerDown);
       destroy();
     };
   }, [color, zIndex]);
