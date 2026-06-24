@@ -1,0 +1,504 @@
+<!DOCTYPE html><html class="dark" lang="es" style="width: 1280px; height: 2520px; overflow: hidden; position: relative;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ministerial Hub - El Fin Se Acerca</title>
+<!-- Google Fonts: Space Grotesk -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Strict Geometry Enforcer */
+        * {
+            border-radius: 0 !important;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#44464f",
+                        "surface": "#121414",
+                        "gold-base": "#b0925d",
+                        "surface-container-high": "#282a2b",
+                        "on-tertiary": "#38300a",
+                        "primary-fixed": "#d9e2ff",
+                        "inverse-primary": "#4a5e8b",
+                        "primary-fixed-dim": "#b2c6f9",
+                        "on-tertiary-fixed": "#211b00",
+                        "surface-bright": "#37393a",
+                        "on-surface-variant": "#c5c6d0",
+                        "secondary-fixed": "#ffdea7",
+                        "primary": "#b2c6f9",
+                        "surface-container-lowest": "#0c0f0f",
+                        "on-surface": "#e2e2e2",
+                        "secondary-container": "#5c4518",
+                        "on-tertiary-container": "#473f18",
+                        "background": "#121414",
+                        "on-primary-fixed": "#001943",
+                        "surface-container-low": "#1a1c1c",
+                        "on-tertiary-fixed-variant": "#4f471f",
+                        "tertiary-container": "#b7ab7a",
+                        "off-white": "#f8f9fa",
+                        "on-secondary-fixed": "#271900",
+                        "on-background": "#e2e2e2",
+                        "outline": "#8f9099",
+                        "on-secondary-fixed-variant": "#5a4316",
+                        "inverse-on-surface": "#2f3131",
+                        "on-error": "#690005",
+                        "surface-dark": "#0a1832",
+                        "tertiary-fixed-dim": "#d3c793",
+                        "surface-dim": "#121414",
+                        "surface-container-highest": "#333535",
+                        "secondary": "#e3c289",
+                        "gold-highlight": "#fceeb8",
+                        "tertiary": "#d3c793",
+                        "inverse-surface": "#e2e2e2",
+                        "secondary-fixed-dim": "#e3c289",
+                        "navy-midnight": "#102751",
+                        "tertiary-fixed": "#f0e3ad",
+                        "on-primary-fixed-variant": "#324671",
+                        "on-secondary-container": "#d4b47c",
+                        "error-container": "#93000a",
+                        "primary-container": "#102751",
+                        "surface-container": "#1e2020",
+                        "on-primary": "#1a2f59",
+                        "on-secondary": "#412d02",
+                        "on-primary-container": "#7b8fbf",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#333535",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#b2c6f9"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "unit": "4px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "label-sm": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "display-lg": ["Space Grotesk"],
+                        "label-lg": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-md": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased">
+<!-- TopNavBar Shared Component -->
+<header class="bg-background border-b-2 border-gold-base w-full sticky top-0 z-40 hidden md:flex">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4"><img alt="Ministerio Evangelístico Pentecostal" class="h-14 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjW-4ZeJCqxtWqh4llvLyStaQj4RKmR9IigSdiuI9mQow-MqaLpwaIFztGZP4zFCIadOOv7euBVslYm9wVxZirrbzKUe3mw3kXiCPaDJWCjjF03EY6Guyw0T_dPEez6gq2g7KkGnRtxyDeGcy8hGfuLqPBtDgdWQUGqxOD9Ys6LUopEwjxbaLoquaREeupxmKYECddM_1ZFq5NqS3DrpSBWjbvhyZJxS7wY-fWnzWk_KqZoB9CMhYRtcdJVF2jn_F6Ycn68Hs6CaM8"><div class="flex flex-col"><span class="font-headline-md text-headline-md font-bold text-gold-base tracking-tighter uppercase leading-none">PLATAFORMA DIGITAL</span><span class="font-label-sm text-label-sm text-gold-base opacity-80 uppercase tracking-widest">EL FIN SE ACERCA</span></div></div>
+<nav class="flex gap-8"><a class="font-label-lg text-label-lg text-gold-highlight font-bold border-b-2 border-gold-base transition-colors duration-200" href="#">INICIO</a>
+<a class="font-label-lg text-label-lg text-gold-base opacity-80 hover:text-gold-highlight transition-colors duration-200" href="#">NOSOTROS</a>
+<a class="font-label-lg text-label-lg text-gold-base opacity-80 hover:text-gold-highlight transition-colors duration-200" href="#">DEPARTAMENTOS</a>
+<a class="font-label-lg text-label-lg text-gold-base opacity-80 hover:text-gold-highlight transition-colors duration-200" href="#">RECURSOS</a>
+<a class="font-label-lg text-label-lg text-gold-base opacity-80 hover:text-gold-highlight transition-colors duration-200" href="#">LIBRERÍA ISRAEL</a></nav>
+<div class="flex items-center gap-4">
+<button class="text-gold-base hover:text-gold-highlight transition-colors duration-200">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="w-full flex flex-col gap-24 pt-8">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="relative w-full h-[600px] border-2 border-gold-base flex items-center bg-surface-dark overflow-hidden group">
+<div class="absolute inset-0 z-0 opacity-40 mix-blend-luminosity bg-cover bg-center" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida/AP1WRLu_i-vX45c61t-fxUJX-3ye9w7Ef9VIF4HzKuhmUtUiJI4iOXU8QBQkZk62Fb9DFRv43O4R3Ekn1FbkR8-sRtqtumumplluIl6UGzbAoYsghQ96LNftF4PUsj4HNbenc38u-i5E1LWuvQmdRpvZDGmPBrwF-uYhyqbc3Ts0eoKoxJs0wfbcJRRW3-O8y3zdqrlmIQbPWnkKg-UR1_6KL3EF0Up49NR0-6svnZh-SlpKu0lAk0SaQhD2yy3j&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-navy-midnight/90 to-transparent z-10"></div>
+<div class="relative z-20 p-8 md:p-16 max-w-2xl flex flex-col gap-6">
+<div class="inline-block bg-gold-base text-navy-midnight px-3 py-1 font-label-sm text-label-sm uppercase self-start border border-gold-base">
+                        Estudio Profético y Edificación
+                    </div>
+<h1 class="font-display-lg text-display-lg text-gold-highlight uppercase leading-tight">Plataforma Digital DEL Ministerio&nbsp;<div class="">el fin se acerca.</div></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Descubre un espacio dedicado a la edificación espiritual y el estudio profundo de la Palabra. Aquí encontrarás recursos doctrinales, análisis profético y herramientas esenciales para fortalecer tu fe en los tiempos finales.</p>
+<div class="flex flex-wrap gap-4 mt-4">
+<button class="bg-navy-midnight border-2 border-gold-base text-off-white font-label-lg text-label-lg uppercase px-8 py-4 hover:border-gold-highlight transition-colors">
+                            Escuchar Radio
+                        </button>
+<button class="bg-transparent border-2 border-gold-base text-gold-base font-label-lg text-label-lg uppercase px-8 py-4 hover:bg-gold-base/10 transition-colors">
+                            Explorar Recursos
+                        </button>
+</div>
+</div>
+</div>
+</section><section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full flex flex-col gap-8" id="nosotros"><div class="border-b-2 border-gold-base pb-2"><h2 class="font-display-lg text-label-lg text-gold-base uppercase tracking-widest">NOSOTROS</h2></div><div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center"><div class="relative border-2 border-gold-base aspect-video overflow-hidden group"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxGMArN4FTBJtjMwO-AI7NxHWI_K1qPkFZsLEiHGnSghq0OaDpOX4k1f5u99_HbwoITXmn2PVird7TvO0XnRAX1PWa7ywIq7WExm-aXxBSa_5fP9MfFUCwqbc0fjtB1Ig9EhbBMceAgNPqSS9KgJoU5zDdNKk52o2bNyl-u8366F1ZQMMXet34lNIdlGvHxW-coQeN5ikzFJ96hA1R20sNK5YrnQloy3iwsgNyfOFDzBsYH24wbp2HBa6hXp1gvxhxTZBpp5Fve_iA" alt="Ministerio Evangelístico Pentecostal" class="w-full h-full object-cover"></div><div class="flex flex-col gap-6"><h3 class="font-display-lg text-5xl text-gold-base uppercase tracking-tighter">DESDE 1995</h3><p class="font-body-lg text-body-lg text-off-white opacity-80">Centralizando recursos bíblicos con urgencia y claridad para preparar a la iglesia.</p><button class="self-start border-2 border-gold-base text-gold-base font-label-lg text-label-lg uppercase px-8 py-3 hover:bg-gold-base hover:text-navy-midnight transition-colors">UBICACIONES</button></div></div><div class="bg-surface-container-high border-2 border-gold-base p-8 flex flex-col md:flex-row items-center gap-8"><div class="w-24 h-24 bg-gold-base flex items-center justify-center shrink-0"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeZ3eqsZdep37GuykFkKXy4dIPzcXKxe0Zgiqmz4a6Ps_7Cw2RbnCWjGuzLmVrA2bgJLbircQ_hg9pRvA126aBOElfWS-qS5uG8xR99Kz6U1yuVBCj-wjIYF3uvg8KSib7gc-ACr-yRT6gGJe5sZjl__c9JM3NP3KzrSlO-1bhYC3I5EqPMy9SWcErtUmpKQrzfK5R8r67yQYmU4SmnaVaa9ffJMFNl47Wv3NMS4R9myT-XJnzd8SUP_EtNVJtrHxrwfps1fgT6CbT" alt="Pastor Marcos Morales" class="w-full h-full object-cover"></div><div class="flex flex-col gap-4 w-full"><h3 class="font-headline-md text-headline-md text-off-white uppercase font-bold">PASTOR MARCOS MORALES</h3><p class="font-body-md text-body-md text-off-white opacity-70">Dedicado a la predicación del evangelio pentecostal y la defensa de la fe desde la fundación de este ministerio.</p><div class="flex gap-8"><a class="text-gold-base font-label-lg text-label-lg uppercase flex items-center gap-2 hover:text-gold-highlight transition-colors" href="#">LEER BIOGRAFÍA <span class="material-symbols-outlined text-sm">arrow_forward</span></a><a class="text-gold-base font-label-lg text-label-lg uppercase flex items-center gap-2 hover:text-gold-highlight transition-colors" href="#">AGENDA <span class="material-symbols-outlined text-sm">calendar_today</span></a></div></div></div></section><section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full flex flex-col gap-8" id="noticias">
+<div class="border-b-2 border-gold-base pb-2">
+<h2 class="font-display-lg text-headline-lg text-gold-base uppercase tracking-tighter">NOTICIAS DESTACADAS DEL MES</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Main Feature Story (Left 2/3) -->
+<div class="md:col-span-2 flex flex-col gap-6 bg-surface-container-low p-6 border-2 border-gold-base/30">
+<!-- Video/Image Placeholder -->
+<div class="relative aspect-video bg-surface-container-high border-2 border-gold-base flex items-center justify-center group cursor-pointer">
+<div class="absolute inset-0 opacity-40 bg-cover bg-center" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida/AP1WRLu_i-vX45c61t-fxUJX-3ye9w7Ef9VIF4HzKuhmUtUiJI4iOXU8QBQkZk62Fb9DFRv43O4R3Ekn1FbkR8-sRtqtumumplluIl6UGzbAoYsghQ96LNftF4PUsj4HNbenc38u-i5E1LWuvQmdRpvZDGmPBrwF-uYhyqbc3Ts0eoKoxJs0wfbcJRRW3-O8y3zdqrlmIQbPWnkKg-UR1_6KL3EF0Up49NR0-6svnZh-SlpKu0lAk0SaQhD2yy3j&quot;);"></div>
+<span class="material-symbols-outlined text-6xl text-gold-base opacity-60 group-hover:opacity-100 transition-opacity">play_circle</span>
+</div>
+<!-- Content -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="text-error font-bold font-label-lg text-label-lg">1 ABR</span>
+<span class="text-gold-base opacity-40">•</span>
+<span class="text-gold-base font-label-lg text-label-lg uppercase tracking-widest">ACTUALIDAD</span>
+</div>
+<h3 class="font-display-lg text-display-lg text-off-white uppercase leading-tight">El caso Noelia Castillo: Reflexión bíblica frente a la eutanasia y la soberanía de Dios</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Un análisis profundo sobre el valor de la vida desde la perspectiva de las Escrituras. Exploramos la verdad bíblica ante los dilemas éticos contemporáneos y el consuelo de la fe en momentos de crisis.</p>
+<button class="self-start border-2 bg-transparent text-off-white font-label-lg text-label-lg uppercase px-8 py-3 hover:border-gold-base transition-colors border-gold-base">
+        LEER ARTÍCULO COMPLETO
+      </button>
+</div>
+</div>
+<!-- Sidebar (Right 1/3) -->
+<div class="flex flex-col gap-8 border-l-2 border-gold-base/10 md:pl-8">
+<!-- Sidebar Item 1 -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="text-error font-bold font-label-sm text-label-sm">1 MAR</span>
+<span class="bg-surface-container-high text-gold-base px-2 py-0.5 font-label-sm text-label-sm uppercase">INTERNACIONAL</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-off-white uppercase leading-tight">
+        Quién tiene el poder en Irán tras la muerte del ayatolá Alí Jamenei y cómo se elige a su sucesor
+      </h4>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-70">
+        Implicaciones geopolíticas y proféticas de los recientes eventos en Medio Oriente.
+      </p>
+</div>
+<hr class="border-gold-base/10">
+<!-- Sidebar Item 2 -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="text-error font-bold font-label-sm text-label-sm">1 ENE</span>
+<span class="bg-surface-container-high text-gold-base px-2 py-0.5 font-label-sm text-label-sm uppercase">LANZAMIENTO</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-off-white uppercase leading-tight">
+        NUESTRO LIBRO «LAS GRANDES MENTIRAS DEL CESACIONISMO»
+      </h4>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-70">
+        Una defensa bíblica contundente de la vigencia de los dones espirituales en la iglesia de hoy.
+      </p>
+<a class="text-gold-base font-label-lg text-label-lg uppercase flex items-center gap-2 hover:text-gold-highlight transition-colors mt-2" href="#">
+        ADQUIRIR <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section><section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full flex flex-col gap-8" id="multimedia">
+<div class="border-b-2 border-gold-base pb-2">
+<h2 class="font-display-lg text-headline-lg text-gold-base uppercase tracking-tighter">CENTRO MULTIMEDIA Y REDES SOCIALES</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- LEFT COLUMN: YouTube Live -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<div class="relative aspect-video bg-surface-dark border-2 border-gold-base flex flex-col items-center justify-center group overflow-hidden">
+<div class="absolute top-4 left-4 z-20 flex items-center gap-2 bg-error px-3 py-1">
+<span class="w-2 h-2 bg-off-white rounded-full animate-ping"></span>
+<span class="font-label-sm text-label-sm text-off-white font-bold uppercase">LIVE</span>
+</div>
+<div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida/AP1WRLu_i-vX45c61t-fxUJX-3ye9w7Ef9VIF4HzKuhmUtUiJI4iOXU8QBQkZk62Fb9DFRv43O4R3Ekn1FbkR8-sRtqtumumplluIl6UGzbAoYsghQ96LNftF4PUsj4HNbenc38u-i5E1LWuvQmdRpvZDGmPBrwF-uYhyqbc3Ts0eoKoxJs0wfbcJRRW3-O8y3zdqrlmIQbPWnkKg-UR1_6KL3EF0Up49NR0-6svnZh-SlpKu0lAk0SaQhD2yy3j&quot;);"></div>
+<span class="material-symbols-outlined text-6xl text-error z-10">play_circle</span>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent z-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gold-base">smart_display</span>
+<span class="font-headline-md text-off-white uppercase">TRANSMISIÓN EN VIVO - CANAL OFICIAL</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high border-2 border-gold-base p-4 flex flex-col gap-4 w-full">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gold-base">groups</span>
+<span class="font-label-lg text-off-white uppercase">FACEBOOK</span>
+</div>
+<button class="border border-gold-base text-gold-base px-3 py-1 font-label-sm text-label-sm uppercase hover:bg-gold-base hover:text-navy-midnight transition-colors">FOLLOW</button>
+</div>
+<div class="aspect-video bg-surface-dark border border-gold-base/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-gold-base opacity-20 text-5xl">feed</span>
+</div>
+</div></div>
+<!-- RIGHT COLUMN: Social Feed -->
+<div class="flex flex-col gap-6">
+<!-- Instagram -->
+<div class="bg-surface-container-high border-2 border-gold-base p-4 flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gold-base">photo_camera</span>
+<span class="font-label-lg text-off-white uppercase">INSTAGRAM</span>
+</div>
+<button class="border border-gold-base text-gold-base px-3 py-1 font-label-sm text-label-sm uppercase hover:bg-gold-base hover:text-navy-midnight transition-colors">FOLLOW</button>
+</div>
+<div class="aspect-square bg-surface-dark border border-gold-base/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-gold-base opacity-20 text-5xl">image</span>
+</div>
+</div>
+<!-- TikTok -->
+<div class="bg-surface-container-high border-2 border-gold-base p-4 flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gold-base">movie</span>
+<span class="font-label-lg text-off-white uppercase">TIKTOK</span>
+</div>
+<button class="border border-gold-base text-gold-base px-3 py-1 font-label-sm text-label-sm uppercase hover:bg-gold-base hover:text-navy-midnight transition-colors">FOLLOW</button>
+</div>
+<div class="aspect-[9/16] h-48 mx-auto bg-surface-dark border border-gold-base/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-gold-base opacity-20 text-5xl">smartphone</span>
+</div>
+</div>
+<!-- Facebook -->
+<div class="bg-surface-container-high border-2 border-gold-base p-6 flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gold-base">radio</span>
+<span class="font-label-lg text-off-white uppercase">RADIO TIEMPOS FINALES</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-gold-highlight uppercase">RADIO EN VIVO</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-70">
+Sintonice nuestra señal 24/7 con programación que edifica su alma.
+</p>
+</div>
+<button class="mt-2 bg-gold-base text-navy-midnight font-label-lg text-label-lg uppercase px-6 py-3 hover:bg-gold-highlight transition-colors w-full">
+ESCUCHAR AHORA
+</button>
+</div></div>
+</div>
+</section><section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full flex flex-col gap-8 mb-24" id="eventos">
+<div class="border-b-2 border-gold-base pb-2">
+<h2 class="font-display-lg text-headline-lg text-gold-base uppercase tracking-tighter">PRÓXIMOS EVENTOS</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Event Card 1 -->
+<div class="bg-surface-container-high border-2 border-gold-base p-8 flex flex-col gap-6 group hover:border-gold-highlight transition-all">
+<div class="bg-gold-base text-navy-midnight px-3 py-1 font-label-lg text-label-lg uppercase self-start font-bold">
+        06 DIC
+      </div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-off-white uppercase leading-tight">CULTO DE CONFERENCIAS</h3>
+<div class="flex items-center gap-2 text-gold-base opacity-80">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="font-label-sm text-label-sm uppercase">SANTIAGO CENTRO</span>
+</div>
+<div class="flex items-center gap-2 text-gold-base opacity-80">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-label-sm text-label-sm uppercase">19:30 HORAS</span>
+</div>
+</div>
+<button class="mt-auto border-2 border-gold-base text-gold-base font-label-lg text-label-lg uppercase px-6 py-3 hover:bg-gold-base hover:text-navy-midnight transition-colors">
+        VER MÁS
+      </button>
+</div>
+<!-- Event Card 2 -->
+<div class="bg-surface-container-high border-2 border-gold-base p-8 flex flex-col gap-6 group hover:border-gold-highlight transition-all">
+<div class="bg-gold-base text-navy-midnight px-3 py-1 font-label-lg text-label-lg uppercase self-start font-bold">
+        28 NOV
+      </div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-off-white uppercase leading-tight">CAMPAÑA EVANGELÍSTICA</h3>
+<div class="flex items-center gap-2 text-gold-base opacity-80">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="font-label-sm text-label-sm uppercase">PLAZA DE ARMAS</span>
+</div>
+<div class="flex items-center gap-2 text-gold-base opacity-80">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-label-sm text-label-sm uppercase">19:15 HORAS</span>
+</div>
+</div>
+<button class="mt-auto border-2 border-gold-base text-gold-base font-label-lg text-label-lg uppercase px-6 py-3 hover:bg-gold-base hover:text-navy-midnight transition-colors">
+        VER MÁS
+      </button>
+</div>
+<!-- Event Card 3 -->
+<div class="bg-surface-container-high border-2 border-gold-base p-8 flex flex-col gap-6 group hover:border-gold-highlight transition-all">
+<div class="bg-gold-base text-navy-midnight px-3 py-1 font-label-lg text-label-lg uppercase self-start font-bold">
+        22 NOV
+      </div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-off-white uppercase leading-tight">SEGUNDO CONGRESO DE MUJERES</h3>
+<div class="flex items-center gap-2 text-gold-base opacity-80">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="font-label-sm text-label-sm uppercase">TEMPLO CENTRAL</span>
+</div>
+<div class="flex items-center gap-2 text-gold-base opacity-80">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-label-sm text-label-sm uppercase">10:00 HORAS</span>
+</div>
+</div>
+<button class="mt-auto border-2 border-gold-base text-gold-base font-label-lg text-label-lg uppercase px-6 py-3 hover:bg-gold-base hover:text-navy-midnight transition-colors">
+        VER MÁS
+      </button>
+</div>
+</div>
+</section><section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full flex flex-col gap-8 mb-12" id="recursos-edificacion"><div class="border-b-2 border-gold-base pb-2">
+<h2 class="font-display-lg text-headline-lg text-gold-base uppercase tracking-tighter">RECURSOS PARA LA EDIFICACIÓN</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Material de Estudio Card -->
+<div class="bg-surface-container-low border-2 border-gold-base p-8 md:p-12 flex flex-col gap-8 relative group hover:bg-surface-container-high transition-colors duration-300">
+<div class="flex justify-between items-start">
+<div class="w-14 h-14 bg-navy-midnight border border-gold-base flex items-center justify-center">
+<span class="material-symbols-outlined text-gold-base text-3xl">tablet_android</span>
+</div>
+<span class="material-symbols-outlined text-gold-base opacity-10 text-6xl absolute top-8 right-8">menu_book</span>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-display-lg text-headline-lg text-gold-highlight uppercase tracking-tight">MATERIAL DE ESTUDIO</h3>
+<p class="font-body-md text-body-md text-off-white opacity-80 leading-relaxed">
+Acceso inmediato a Reflexiones, Bosquejos para predicadores y Librillos teológicos.
+</p>
+</div>
+<div class="flex flex-wrap gap-4 mt-auto pt-4">
+<button class="bg-gold-base text-navy-midnight font-label-lg text-label-lg uppercase px-8 py-3 hover:bg-gold-highlight transition-colors font-bold">
+REFLEXIONES
+</button>
+<button class="bg-transparent border-2 border-gold-base text-gold-base font-label-lg text-label-lg uppercase px-8 py-3 hover:bg-gold-base/10 transition-colors">
+BOSQUEJOS
+</button>
+</div>
+</div>
+<!-- Librería Israel Card -->
+<div class="bg-surface-container-low border-2 border-gold-base p-8 md:p-12 flex flex-col gap-8 relative group hover:bg-surface-container-high transition-colors duration-300">
+<div class="flex justify-between items-start">
+<div class="w-14 h-14 bg-navy-midnight border border-gold-base flex items-center justify-center">
+<span class="material-symbols-outlined text-gold-base text-3xl">shopping_cart</span>
+</div>
+<span class="material-symbols-outlined text-gold-base opacity-10 text-6xl absolute top-8 right-8 rotate-12">book</span>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-display-lg text-headline-lg text-gold-highlight uppercase tracking-tight">LIBRERÍA ISRAEL</h3>
+<p class="font-body-md text-body-md text-off-white opacity-80 leading-relaxed">
+Adquiere biblias de estudio, literatura escogida y material devocional seleccionado con rigor doctrinal para tu crecimiento.
+</p>
+</div>
+<div class="mt-auto pt-4">
+<button class="w-full md:w-auto bg-transparent border-2 border-gold-base text-gold-base font-label-lg text-label-lg uppercase px-8 py-3 flex items-center justify-center gap-3 hover:bg-gold-base hover:text-navy-midnight transition-colors">
+VISITAR TIENDA <span class="material-symbols-outlined">storefront</span>
+</button>
+</div>
+</div>
+</div></section>
+</main>
+<!-- BottomNavBar Shared Component -->
+<!-- Web Version Persistent Player (simulating the nav bar for desktop) -->
+<footer class="bg-surface-container-lowest border-t-2 border-gold-base pt-16 pb-8 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<!-- Column 1: Identity -->
+<div class="flex flex-col gap-4">
+<img alt="Logo" class="h-20 w-auto object-contain self-start" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWs-pZjziEnhWRAMIQnoXuZzwoOZI_xFGch08aDrYloDG4P8TfeRAn2MCwmk_BmPC8qU14A_v5-JCLCh4rg2Pie3xSqtHr9KC5iZNWOI2BL1naIuO1zzU88nq1MpxzRlGL04REgvHTJxS64oktbQ47DoFobNAOZNxtoizkYm9gnEtghjzxE-wO65b9IfuByfKncJ1ndge45Ym7BXusw61q9kDNg1p99HI9yG6_SYXsG3-kqhMylQUKznPgB5AHOkt32CKh_deKgqDR">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-gold-base font-bold uppercase leading-tight">Ministerio Evangelístico Pentecostal</span>
+<span class="font-label-lg text-label-lg text-gold-highlight tracking-widest uppercase">El fin se acerca</span>
+<span class="font-label-sm text-label-sm text-off-white opacity-60 mt-2">Desde 1995</span>
+</div>
+<div class="flex gap-4 mt-2">
+<a class="text-gold-base hover:text-gold-highlight transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-gold-base hover:text-gold-highlight transition-colors" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+</a>
+<a class="flex items-center gap-2 text-gold-base hover:text-gold-highlight transition-colors" href="#">
+<span class="material-symbols-outlined">broadcast_on_home</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Radio en Vivo</span>
+</a></div>
+</div>
+<!-- Column 2: Location -->
+<div class="flex flex-col gap-6">
+<h4 class="font-headline-md text-label-lg text-gold-base uppercase tracking-widest border-b border-gold-base/30 pb-2">Dirección</h4>
+<div class="flex gap-3 text-off-white opacity-80">
+<span class="material-symbols-outlined text-gold-base">location_on</span>
+<p class="font-body-md text-body-md">Chacabuco 549, Santiago Centro</p>
+</div>
+</div>
+<!-- Column 3: Hours -->
+<div class="flex flex-col gap-6">
+<h4 class="font-headline-md text-label-lg text-gold-base uppercase tracking-widest border-b border-gold-base/30 pb-2">Horarios</h4>
+<ul class="flex flex-col gap-4 font-body-md text-body-md text-off-white opacity-80">
+<li class="flex flex-col">
+<span class="font-bold text-gold-highlight">Lunes de Victoria</span>
+<span class="">19:15 horas - Plaza de Armas de Santiago</span>
+</li>
+<li class="flex flex-col">
+<span class="font-bold text-gold-highlight">Miércoles y Viernes</span>
+<span class="">19:30 horas</span>
+</li>
+<li class="flex flex-col">
+<span class="font-bold text-gold-highlight">Domingo</span>
+<span class="">11:00 horas y 18:30 horas</span>
+</li>
+</ul>
+</div>
+<!-- Column 4: Contact & Links -->
+<div class="flex flex-col gap-6">
+<h4 class="font-headline-md text-label-lg text-gold-base uppercase tracking-widest border-b border-gold-base/30 pb-2">Contacto</h4>
+<div class="flex flex-col gap-3 text-off-white opacity-80">
+<a class="flex items-center gap-3 hover:text-gold-highlight transition-colors" href="mailto:marcosmorales_evangelista@hotmail.com">
+<span class="material-symbols-outlined text-gold-base">mail</span>
+<span class="font-body-md text-body-md break-all">marcosmorales_evangelista@hotmail.com</span>
+</a>
+<a class="flex items-center gap-3 hover:text-gold-highlight transition-colors" href="mailto:elfinseacercaministerio@gmail.com">
+<span class="material-symbols-outlined text-gold-base">mail</span>
+<span class="font-body-md text-body-md break-all">elfinseacercaministerio@gmail.com</span>
+</a>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gold-base">call</span>
+<span class="font-body-md text-body-md">+56 2 2688 9465</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 mt-4">
+<a class="font-label-sm text-label-sm text-gold-base hover:underline uppercase" href="#">Términos y condiciones</a>
+<a class="font-label-sm text-label-sm text-gold-base hover:underline uppercase" href="#">Política de privacidad</a>
+</div>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="max-w-container-max mx-auto pt-8 border-t border-gold-base/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm text-off-white opacity-40 uppercase tracking-widest">
+      © 2025 elfinseacerca.org
+    </p>
+<div class="flex gap-6">
+<span class="font-label-sm text-label-sm text-off-white opacity-40 uppercase">Santiago, Chile</span>
+</div>
+</div>
+</footer><div class="fixed bottom-8 right-8 z-50 group">
+<a aria-label="Escuchar Radio Tiempos Finales en Vivo" class="flex items-center gap-0 group-hover:gap-3 bg-gold-base text-navy-midnight p-4 rounded-full shadow-2xl transition-all duration-300 ease-in-out overflow-hidden max-w-[60px] group-hover:max-w-[240px]" href="#">
+<div class="relative flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">broadcast_on_home</span>
+<span class="absolute inset-0 rounded-full bg-gold-base animate-ping opacity-40"></span>
+</div>
+<span class="font-label-lg text-label-lg uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">Radio en Vivo</span>
+</a>
+</div>
+
+
+
+
+</body></html>
