@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import "tailwindcss";
+
+:root {
+  --background: #121414;
+  --foreground: #e2e2e2;
+}
+
+@theme {
+  /* Colors from Stitch Design System */
+  --color-background: #121414;
+  --color-on-background: #e2e2e2;
+  --color-surface: #121414;
+  --color-on-surface: #e2e2e2;
+  --color-surface-dim: #121414;
+  --color-surface-bright: #37393a;
+  
+  --color-surface-container-lowest: #0c0f0f;
+  --color-surface-container-low: #1a1c1c;
+  --color-surface-container: #1e2020;
+  --color-surface-container-high: #282a2b;
+  --color-surface-container-highest: #333535;
+
+  --color-gold-base: #b0925d;
+  --color-gold-highlight: #fceeb8;
+  --color-navy-midnight: #102751;
+  --color-surface-dark: #0a1832;
+  --color-off-white: #f8f9fa;
+  
+  --color-primary: #b2c6f9;
+  --color-on-primary: #1a2f59;
+  --color-primary-container: #102751;
+  --color-on-primary-container: #7b8fbf;
+
+  --color-secondary: #e3c289;
+  --color-on-secondary: #412d02;
+  --color-secondary-container: #5c4518;
+  --color-on-secondary-container: #d4b47c;
+
+  --color-tertiary: #d3c793;
+  --color-on-tertiary: #38300a;
+  --color-tertiary-container: #b7ab7a;
+  --color-on-tertiary-container: #473f18;
+
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  
+  --color-outline: #8f9099;
+  --color-outline-variant: #44464f;
+
+  /* Font Families */
+  --font-headline: var(--font-space-grotesk), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  /* Spacing */
+  --spacing-margin-desktop: 64px;
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1280px;
+  --spacing-margin-mobile: 16px;
+}
+
+/* Base styles and strict flat design constraints */
+html {
+  scroll-behavior: auto; /* Handled by Lenis smooth scroll */
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-body);
+}
+
+/* Strict Geometry Enforcer: Zero Border Radius */
+* {
+  border-radius: 0px !important;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-outlined.fill {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* Custom Text Reveal masking container */
+.text-reveal-mask {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+/* Smooth scroll optimization */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis-scrolling iframe {
+  pointer-events: none;
+}
