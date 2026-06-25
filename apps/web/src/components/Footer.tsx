@@ -159,3 +159,5 @@ export default function Footer({ theme = 'dark' }: FooterProps) {
     </footer>
   );
 }
+
+// Cache invalidation comment
