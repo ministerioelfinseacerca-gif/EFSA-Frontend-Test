@@ -77,14 +77,14 @@ export default function RadioPlayerPersistent() {
       id="radio-player"
       className="fixed bottom-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md border-t-2 border-gold-base transition-all duration-300 shadow-none"
     >
-      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-2 flex flex-row flex-wrap md:flex-nowrap items-center justify-between gap-y-2 gap-x-4">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 py-3 md:py-4 flex flex-row flex-wrap md:flex-nowrap items-center justify-between gap-y-3 gap-x-4">
         
         {/* Left Side: Program Information */}
-        <div className="flex items-center gap-4 w-full md:w-auto">
+        <div className="flex items-center gap-4 w-full md:w-auto pb-3 md:pb-0 border-b border-gold-base/10 md:border-0">
           <div className="w-10 h-10 md:w-12 md:h-12 bg-navy-midnight border border-gold-base flex items-center justify-center shrink-0">
             <Radio className="h-5 w-5 md:h-6 md:w-6 text-gold-base animate-pulse" />
           </div>
-          <div className="flex flex-col min-w-0">
+          <div className="flex flex-col min-w-0 flex-1">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 bg-error animate-ping rounded-full inline-block shrink-0"></span>
               <span className="font-body text-[10px] font-bold text-gold-highlight tracking-widest uppercase">
@@ -101,7 +101,7 @@ export default function RadioPlayerPersistent() {
         </div>
 
         {/* Center: Play Control & Equalizer Animation */}
-        <div className="flex items-center gap-4 md:gap-6 justify-center">
+        <div className="flex items-center gap-4 md:gap-6 justify-start">
           {/* Equalizer (simulated audio bars) */}
           <div className="flex items-end gap-1 h-6 w-12 shrink-0 justify-center">
             {[...Array(6)].map((_, i) => (
