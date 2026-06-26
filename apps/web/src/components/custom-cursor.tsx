@@ -14,19 +14,7 @@ export default function CustomCursor({
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    // --- RIPPLE EFFECT ---
-    const handlePointerDown = (e: PointerEvent) => {
-      const ripple = document.createElement('div');
-      ripple.className = 'click-ripple';
-      ripple.style.left = `${e.clientX}px`;
-      ripple.style.top = `${e.clientY}px`;
-      document.body.appendChild(ripple);
 
-      setTimeout(() => {
-        ripple.remove();
-      }, 600);
-    };
-    window.addEventListener('pointerdown', handlePointerDown);
 
     // --- FOLLOW CURSOR EFFECT ---
     let canvas: HTMLCanvasElement;
@@ -139,36 +127,9 @@ export default function CustomCursor({
     init();
 
     return () => {
-      window.removeEventListener('pointerdown', handlePointerDown);
       destroy();
     };
   }, [color, zIndex]);
 
-  return (
-    <style>{`
-      .click-ripple {
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        background: rgba(225, 29, 72, 0.15); /* Light red accent background */
-        border: 2px solid var(--color-efsa-red, #E11D48); /* Red accent border */
-        border-radius: 50% !important;
-        pointer-events: none;
-        z-index: 99999;
-        transform: translate(-50%, -50%);
-        animation: click-ripple-anim 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      }
-
-      @keyframes click-ripple-anim {
-        0% {
-          transform: translate(-50%, -50%) scale(0.1);
-          opacity: 0.9;
-        }
-        100% {
-          transform: translate(-50%, -50%) scale(3.5);
-          opacity: 0;
-        }
-      }
-    `}</style>
-  );
+  return null;
 }
