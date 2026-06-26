@@ -36,7 +36,7 @@ export default function RadioPortalPage() {
 
       <main className="w-full flex flex-col gap-20 pb-32">
         {/* Hero Section */}
-        <section className="relative w-full overflow-hidden border-b border-navy-midnight/10 bg-transparent py-24 md:py-32 px-4 min-h-[60vh] flex flex-col justify-center">
+        <section className="relative w-full overflow-hidden border-b border-navy-midnight/10 bg-transparent py-24 md:py-32 px-6 sm:px-8 md:px-12 lg:px-16 min-h-[60vh] flex flex-col justify-center">
           {/* Background Video */}
           <video 
             autoPlay 

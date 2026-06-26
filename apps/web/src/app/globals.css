@@ -290,7 +290,12 @@ html.lenis, html.lenis body {
 }
 
 * {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
 }
 
 /* Accessibility: prefers-reduced-motion */

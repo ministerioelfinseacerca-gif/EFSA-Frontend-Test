@@ -64,7 +64,7 @@ export default function Hero() {
       {/* Content */}
       <div 
         ref={contentRef} 
-        className="relative z-20 w-full max-w-7xl mx-auto px-4 flex flex-col items-center text-center"
+        className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 flex flex-col items-center text-center"
       >
         {/* Overline Oficial */}
         <div className="hero-entrance hero-entrance-delay-1">

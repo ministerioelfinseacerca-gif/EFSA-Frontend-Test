@@ -7,7 +7,7 @@ import PremiumButton from './PremiumButton';
 
 export default function Recursos() {
   return (
-    <section id="recursos-edificacion" className="py-20 sm:py-28 px-4 border-t border-gold-base/10 bg-transparent font-[family-name:var(--font-montserrat)]">
+    <section id="recursos-edificacion" className="py-20 sm:py-28 px-6 sm:px-8 md:px-12 lg:px-16 border-t border-gold-base/10 bg-transparent font-[family-name:var(--font-montserrat)]">
       <div className="max-w-7xl mx-auto flex flex-col gap-12 sm:gap-16">
         
         {/* Title */}

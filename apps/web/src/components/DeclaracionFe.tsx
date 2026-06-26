@@ -282,7 +282,7 @@ export default function DeclaracionFe() {
   return (
     <section
       id="declaracion-fe"
-      className="relative max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full flex flex-col gap-8 scroll-mt-24"
+      className="relative max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 w-full flex flex-col gap-8 scroll-mt-24"
     >
       {/* Title */}
       <div className="border-b-2 border-gold-base pb-2">

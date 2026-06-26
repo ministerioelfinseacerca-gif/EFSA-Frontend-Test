@@ -41,7 +41,7 @@ export default function TopNavBar() {
 
   return (
     <header className="bg-background/95 backdrop-blur-md border-b border-gold-base/20 w-full sticky top-0 z-50">
-      <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+      <div className="flex justify-between items-center w-full px-6 sm:px-8 md:px-12 lg:px-16 py-4 max-w-7xl mx-auto">
         {/* Brand / Back Button for internal pages on mobile */}
         <div className="flex items-center gap-3">
           {isRadioOrBioPage && (

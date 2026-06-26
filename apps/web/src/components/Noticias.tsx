@@ -10,7 +10,7 @@ export default function Noticias() {
   return (
     <section
       id="noticias"
-      className="w-full py-20 sm:py-28 px-4 bg-editorial-beige border-y border-gold-base/20 scroll-mt-24 font-[family-name:var(--font-montserrat)]"
+      className="w-full py-20 sm:py-28 px-6 sm:px-8 md:px-12 lg:px-16 bg-editorial-beige border-y border-gold-base/20 scroll-mt-24 font-[family-name:var(--font-montserrat)]"
     >
       <div className="max-w-7xl mx-auto w-full">
         <ScrollReveal animation="left" className="w-full flex flex-col gap-8">

@@ -31,7 +31,7 @@ export default function Eventos() {
   ];
 
   return (
-    <section id="eventos" className="py-20 sm:py-28 px-4 border-t border-gold-base/15 bg-editorial-beige font-[family-name:var(--font-montserrat)]">
+    <section id="eventos" className="py-20 sm:py-28 px-6 sm:px-8 md:px-12 lg:px-16 border-t border-gold-base/15 bg-editorial-beige font-[family-name:var(--font-montserrat)]">
       <div className="max-w-7xl mx-auto flex flex-col gap-12 sm:gap-16">
         
         {/* Header */}
