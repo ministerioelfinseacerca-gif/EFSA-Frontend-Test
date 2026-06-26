@@ -78,31 +78,31 @@ export default function Footer({ theme = 'dark' }: FooterProps) {
         </div>
 
         {/* Column 2: Location */}
-        <div className="flex flex-col gap-6">
-          <h4 className={`font-headline text-sm ${titleClass} uppercase tracking-widest border-b ${borderClass} pb-2 font-bold`}>
+        <div className="flex flex-col items-center text-center md:items-start md:text-left gap-6">
+          <h4 className={`font-headline text-sm ${titleClass} uppercase tracking-widest border-b ${borderClass} pb-2 font-bold w-full`}>
             Dirección
           </h4>
-          <div className={`flex gap-3 ${textClass}`}>
+          <div className={`flex items-center justify-center md:justify-start gap-3 ${textClass}`}>
             <MapPin className={`h-5 w-5 ${iconClass} shrink-0`} />
             <p className="font-body text-sm leading-relaxed">Chacabuco 549, Santiago Centro</p>
           </div>
         </div>
 
         {/* Column 3: Hours */}
-        <div className="flex flex-col gap-6">
-          <h4 className={`font-headline text-sm ${titleClass} uppercase tracking-widest border-b ${borderClass} pb-2 font-bold`}>
+        <div className="flex flex-col items-center text-center md:items-start md:text-left gap-6">
+          <h4 className={`font-headline text-sm ${titleClass} uppercase tracking-widest border-b ${borderClass} pb-2 font-bold w-full`}>
             Horarios
           </h4>
-          <ul className={`flex flex-col gap-4 font-body text-sm ${textClass}`}>
-            <li className="flex flex-col">
+          <ul className={`flex flex-col items-center md:items-start gap-4 font-body text-sm ${textClass}`}>
+            <li className="flex flex-col items-center md:items-start">
               <span className={`font-bold ${highlightClass}`}>Lunes de Victoria</span>
               <span>19:15 horas - Plaza de Armas de Santiago</span>
             </li>
-            <li className="flex flex-col">
+            <li className="flex flex-col items-center md:items-start">
               <span className={`font-bold ${highlightClass}`}>Miércoles y Viernes</span>
               <span>19:30 horas</span>
             </li>
-            <li className="flex flex-col">
+            <li className="flex flex-col items-center md:items-start">
               <span className={`font-bold ${highlightClass}`}>Domingo</span>
               <span>11:00 horas y 18:30 horas</span>
             </li>
@@ -110,13 +110,13 @@ export default function Footer({ theme = 'dark' }: FooterProps) {
         </div>
 
         {/* Column 4: Contact & Links */}
-        <div className="flex flex-col gap-6">
-          <h4 className={`font-headline text-sm ${titleClass} uppercase tracking-widest border-b ${borderClass} pb-2 font-bold`}>
+        <div className="flex flex-col items-center text-center md:items-start md:text-left gap-6">
+          <h4 className={`font-headline text-sm ${titleClass} uppercase tracking-widest border-b ${borderClass} pb-2 font-bold w-full`}>
             Contacto
           </h4>
-          <div className={`flex flex-col gap-3 ${textClass}`}>
+          <div className={`flex flex-col items-center md:items-start gap-3 ${textClass}`}>
             <a
-              className={`flex items-center gap-3 hover:${highlightClass} transition-colors`}
+              className={`flex items-center justify-center md:justify-start gap-3 hover:${highlightClass} transition-colors`}
               href="mailto:marcosmorales_evangelista@hotmail.com"
             >
               <Mail className={`h-4 w-4 ${iconClass} shrink-0`} />
@@ -125,18 +125,18 @@ export default function Footer({ theme = 'dark' }: FooterProps) {
               </span>
             </a>
             <a
-              className={`flex items-center gap-3 hover:${highlightClass} transition-colors`}
+              className={`flex items-center justify-center md:justify-start gap-3 hover:${highlightClass} transition-colors`}
               href="mailto:elfinseacercaministerio@gmail.com"
             >
               <Mail className={`h-4 w-4 ${iconClass} shrink-0`} />
               <span className="font-body text-xs break-all">elfinseacercaministerio@gmail.com</span>
             </a>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center md:justify-start gap-3">
               <Phone className={`h-4 w-4 ${iconClass} shrink-0`} />
               <span className="font-body text-xs">+56 2 2688 9465</span>
             </div>
           </div>
-          <div className="flex flex-col gap-2 mt-4 font-body text-xs">
+          <div className="flex flex-col items-center md:items-start gap-2 mt-4 font-body text-xs w-full">
             <a className={`${iconClass} hover:underline uppercase`} href="#terminos">
               Términos y condiciones
             </a>
